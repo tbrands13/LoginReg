@@ -1,0 +1,35 @@
+﻿@model User
+
+<div class="d-flex justify-content-around mb-3">
+    <h1>Register to this Cool Site!</h1>
+    <a href="/login" class="btn btn-lg btn-outline-secondary">Login</a>
+</div>
+<div>
+<form class="form-group" asp-controller="Home" asp-action="Register" method="POST">
+    <label asp-for="FirstName">First Name:</label>
+    <input asp-for="FirstName" class="form-control">
+    <span asp-validation-for="FirstName" class="alert-danger"></span>
+    <br>
+
+    <label asp-for="LastName">Last Name:</label>
+    <input asp-for="LastName" class="form-control">
+    <span asp-validation-for="LastName" class="alert-danger"></span>
+    <br>
+
+    <label asp-for="Email">Email:</label>
+    <input asp-for="Email" class="form-control">
+    <span asp-validation-for="Email" class="alert-danger"></span>
+    <br>
+
+    <label asp-for="Password">Password:</label>
+    <input asp-for="Password" class="form-control">
+    <span asp-validation-for="Password" class="alert-danger"></span>
+    <br>
+
+    <label asp-for="Confirm"> Confirm Password:</label>
+    <input asp-for="Confirm" class="form-control">
+    <span asp-validation-for="Confirm" class="alert-danger"></span>
+    <br>
+    <input type="submit" class="btn btn-lg btn-outline-info mt-3" value="Register">
+</form>
+</div>
